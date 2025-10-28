@@ -1,0 +1,16 @@
+# Arquivo .gitignore do projeto Prompt Manager
+
+# Ignorar o arquivo sensível do VSCode que contém tokens/keys
+.vscode/mcp.json
+
+# Arquivos temporários / comuns
+node_modules/
+.env
+.DS_Store
+
+# Editor e sistema
+.vscode/
+*.log
+
+# Build
+dist/
