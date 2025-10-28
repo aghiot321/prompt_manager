@@ -3,20 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Prompts</title>
   </head>
   <body>
     <div class="app">
       <button class="icon-button open-toggle" id="btn-open">
-        <image class="icon" src="assets/open.svg" alt="Abrir Menu" />
+        <img src="assets/open.svg" alt="Abrir Menu" class="icon" />
       </button>
 
       <aside class="sidebar">
@@ -24,27 +23,27 @@
           <img src="assets/logo.svg" alt="Logo" class="logo" />
 
           <button class="icon-button" id="btn-collapse">
-            <image class="icon" src="assets/collapse.svg" alt="Fechar Menu" />
+            <img src="assets/collapse.svg" alt="Fechar Menu" class="icon" />
           </button>
         </header>
 
         <div class="sidebar-content">
           <div class="search-container">
             <img
-              class="icon search-icon"
               src="assets/search.svg"
               alt="Buscar"
+              class="icon search-icon"
             />
 
             <input
+              type="text"
               class="search-input"
               id="search-input"
-              type="text"
               placeholder="Buscar por título"
             />
 
-            <button class="btn btn-primary btn-full" id="btn-new">
-              Novo Prompt
+            <button class="btn-primary btn btn-full" id="btn-new">
+              Novo prompt
             </button>
           </div>
 
@@ -53,14 +52,14 @@
       </aside>
 
       <main class="main">
-        <div class="main-header">
+        <header class="main-header">
           <button id="btn-copy" class="btn-outline btn">
-            <img class="icon" src="assets/copy.svg" alt="Copiar" />
+            <img src="assets/copy.svg" alt="Copiar" class="icon" />
             <span>Copiar</span>
           </button>
 
           <button id="btn-save" class="btn-primary btn w-150">Salvar</button>
-        </div>
+        </header>
 
         <div
           data-placeholder="Título do prompt"
@@ -75,7 +74,7 @@
         </div>
 
         <div
-          data-placeholder="Conteúdo do prompt..."
+          data-placeholder="Conteúdo do prompt ..."
           class="editable-wrapper"
           id="content-wrapper"
         >
