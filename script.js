@@ -59,13 +59,24 @@ function attachAllEditableHandlers() {
 
 function save() {
   const title = elements.promptTitle.textContent.trim()
-  const content = elements.promptContent.innerHTML.trim()
+  let content = elements.promptContent.innerHTML.trim()
   const hasContent = elements.promptContent.textContent.trim()
 
   if (!title || !hasContent) {
     alert("Título e conteúdo não podem estar vazios.")
     return
   }
+
+  // Remove estilos de cor inline que possam deixar o texto preto
+  const tempDiv = document.createElement("div")
+  tempDiv.innerHTML = content
+  const allElements = tempDiv.querySelectorAll("*")
+  allElements.forEach((el) => {
+    if (el.style.color) {
+      el.style.removeProperty("color")
+    }
+  })
+  content = tempDiv.innerHTML
 
   if (state.selectedId) {
     // Editando um prompt existente
@@ -195,6 +206,15 @@ elements.list.addEventListener("click", function (event) {
     if (prompt) {
       elements.promptTitle.textContent = prompt.title
       elements.promptContent.innerHTML = prompt.content
+
+      // Remove estilos inline que possam deixar o texto preto
+      const allElements = elements.promptContent.querySelectorAll("*")
+      allElements.forEach((el) => {
+        if (el.style.color) {
+          el.style.removeProperty("color")
+        }
+      })
+
       updateAllEditableStates()
     }
   }

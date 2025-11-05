@@ -119,6 +119,11 @@ body {
   font-weight: 600;
   font-size: 32px;
   outline: none;
+  color: var(--white) !important;
+}
+
+.prompt-title * {
+  color: var(--white) !important;
 }
 
 .prompt-content {
@@ -128,8 +133,9 @@ body {
   line-height: 32px;
 }
 
+.prompt-content,
 .prompt-content * {
-  color: inherit;
+  color: var(--white) !important;
 }
 
 .editable-wrapper {
