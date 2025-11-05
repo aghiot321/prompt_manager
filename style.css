@@ -123,9 +123,13 @@ body {
 
 .prompt-content {
   font-size: 16px;
-  color: var(--white);
+  color: var(--white) !important;
   outline: none;
   line-height: 32px;
+}
+
+.prompt-content * {
+  color: inherit;
 }
 
 .editable-wrapper {
