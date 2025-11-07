@@ -194,6 +194,7 @@ elements.list.addEventListener("click", function (event) {
 
     if (prompt) {
       elements.promptTitle.textContent = prompt.title
+      elements.promptContent.innerHTML = ""
       elements.promptContent.textContent = prompt.content
       updateAllEditableStates()
     }
